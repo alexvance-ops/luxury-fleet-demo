@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOIRÉ — Luxury Car & Yacht Concierge</title>
+<meta name="description" content="A premium Dubai luxury car and yacht rental demo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080808;--panel:#11110f;--gold:#d8b46a;--gold2:#f1d89a;--muted:#a7a39b;--line:rgba(216,180,106,.22);--white:#f5f3ee}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif}
+a{text-decoration:none;color:inherit}.nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:22px 5vw;background:linear-gradient(#080808d9,transparent);backdrop-filter:blur(8px)}
+.logo{font:600 25px "Playfair Display";letter-spacing:.18em}.logo span{color:var(--gold)}
+.navlinks{display:flex;gap:30px;color:#ddd;font-size:13px}.navlinks a:hover{color:var(--gold)}
+.navcta{border:1px solid var(--line);padding:11px 18px;border-radius:99px;color:var(--gold2);font-size:12px}
+.hero{min-height:100vh;position:relative;display:flex;align-items:end;padding:150px 5vw 80px;overflow:hidden;background:linear-gradient(90deg,#050505e8 0%,#05050577 45%,#05050520 100%),url("https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=2200&q=85") center/cover}
+.hero:after{content:"";position:absolute;inset:auto 0 0;height:45%;background:linear-gradient(transparent,var(--bg))}
+.heroContent{position:relative;z-index:2;max-width:780px}.eyebrow{color:var(--gold);letter-spacing:.28em;text-transform:uppercase;font-size:11px;margin-bottom:20px}
+h1{font:500 clamp(54px,8vw,112px)/.9 "Playfair Display";margin:0 0 26px;letter-spacing:-.035em}.hero p{max-width:560px;color:#d1cec6;font-size:17px;line-height:1.7;margin:0 0 34px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}.btn{padding:15px 23px;border-radius:4px;font-weight:600;font-size:12px;letter-spacing:.04em}.gold{background:var(--gold);color:#090909}.ghost{border:1px solid #ffffff38;background:#ffffff08}.gold:hover{background:var(--gold2)}.ghost:hover{border-color:var(--gold);color:var(--gold)}
+.section{padding:110px 5vw}.sectionHead{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:42px}.kicker{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}h2{font:500 clamp(38px,5vw,62px) "Playfair Display";margin:8px 0 0}.sectionHead p{color:var(--muted);max-width:390px;line-height:1.7;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--panel);border:1px solid #ffffff0c;overflow:hidden;transition:.35s}.card:hover{transform:translateY(-5px);border-color:var(--line)}.photo{height:300px;background-size:cover;background-position:center;position:relative}.tag{position:absolute;top:15px;left:15px;background:#080808b8;border:1px solid var(--line);padding:8px 11px;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold2)}
+.cardbody{padding:23px}.cardtop{display:flex;justify-content:space-between;gap:15px}.card h3{font:500 26px "Playfair Display";margin:0}.price{color:var(--gold2);font-size:13px;white-space:nowrap}.meta{display:flex;gap:15px;color:#98958e;font-size:11px;margin:15px 0 22px}.card .btn{display:block;text-align:center;width:100%}
+.trust{background:#0d0d0b;border-top:1px solid #ffffff0a;border-bottom:1px solid #ffffff0a}.trustgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px}.trustitem{padding:30px;border-right:1px solid #ffffff0b}.trustitem:last-child{border:0}.num{color:var(--gold);font:500 27px "Playfair Display";margin-bottom:8px}.trustitem p{color:#aaa59c;font-size:12px;line-height:1.6;margin:0}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.imagePanel{min-height:570px;background:url("https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?auto=format&fit=crop&w=1400&q=85") center/cover;position:relative}.imagePanel:after{content:"NOIRÉ";position:absolute;bottom:25px;left:25px;font:500 42px "Playfair Display";color:#fff9}
+.copy p{color:#aaa59c;line-height:1.9;font-size:15px}.list{display:grid;gap:18px;margin:28px 0}.list div{display:flex;gap:14px;align-items:start}.check{color:var(--gold);font-size:18px}.list b{font-size:13px}.list span{display:block;color:#88837b;font-size:12px;margin-top:4px}
+.quote{padding:95px 8vw;text-align:center;background:radial-gradient(circle at 50% 30%,#1d1a12 0,#080808 55%)}blockquote{font:500 clamp(30px,4vw,52px)/1.25 "Playfair Display";max-width:900px;margin:15px auto 22px}.quote small{color:var(--gold);letter-spacing:.18em;text-transform:uppercase;font-size:10px}
+footer{padding:45px 5vw;border-top:1px solid #ffffff0b;display:flex;justify-content:space-between;color:#77736d;font-size:11px}.footerlogo{font:500 20px "Playfair Display";color:#ddd;letter-spacing:.14em}
+@media(max-width:850px){.navlinks{display:none}.grid{grid-template-columns:1fr}.trustgrid{grid-template-columns:1fr 1fr}.split{grid-template-columns:1fr;gap:35px}.imagePanel{min-height:420px}.sectionHead{display:block}.sectionHead p{margin-top:18px}}
+@media(max-width:520px){.hero{padding:130px 6vw 60px}.hero p{font-size:15px}.trustgrid{grid-template-columns:1fr}.section{padding:80px 6vw}h1{font-size:54px}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a class="logo" href="#">NOIR<span>É</span></a>
+  <div class="navlinks"><a href="#fleet">Fleet</a><a href="#concierge">Concierge</a><a href="#experience">Experience</a></div>
+  <a class="navcta" href="#contact">Private Enquiry</a>
+</nav>
+
+<header class="hero">
+  <div class="heroContent">
+    <div class="eyebrow">Dubai · UAE &nbsp; / &nbsp; Private Mobility</div>
+    <h1>Experience Dubai<br><em>in ultimate luxury.</em></h1>
+    <p>Rare automobiles. Private yachts. White-glove delivery. A discreet concierge experience designed for those who expect more.</p>
+    <div class="buttons">
+      <a class="btn gold" href="https://wa.me/971500000000?text=Hi%20NOIR%C3%89%2C%20I%27d%20like%20to%20make%20a%20private%20booking." target="_blank">BOOK VIA WHATSAPP ↗</a>
+      <a class="btn ghost" href="#fleet">EXPLORE THE COLLECTION</a>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="fleet">
+  <div class="sectionHead">
+    <div><div class="kicker">The Collection</div><h2>Curated for the extraordinary.</h2></div>
+    <p>From supercars built for the boulevard to yachts made for golden-hour escapes. Every reservation is handled personally.</p>
+  </div>
+  <div class="grid">
+    <article class="card">
+      <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=85')"><span class="tag">Supercar</span></div>
+      <div class="cardbody"><div class="cardtop"><h3>Porsche 911</h3><span class="price">$850 / day</span></div><div class="meta"><span>0–100 3.7s</span><span>450 HP</span><span>2 Seats</span></div><a class="btn gold" href="https://wa.me/971500000000?text=Hi%20NOIR%C3%89%2C%20I%27d%20like%20to%20book%20the%20Porsche%20911." target="_blank">BOOK THIS CAR ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1200&q=85')"><span class="tag">Grand Tourer</span></div>
+      <div class="cardbody"><div class="cardtop"><h3>BMW M4</h3><span class="price">$650 / day</span></div><div class="meta"><span>0–100 3.5s</span><span>503 HP</span><span>4 Seats</span></div><a class="btn gold" href="https://wa.me/971500000000?text=Hi%20NOIR%C3%89%2C%20I%27d%20like%20to%20book%20the%20BMW%20M4." target="_blank">BOOK THIS CAR ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1566847438217-76e82d383f84?auto=format&fit=crop&w=1200&q=85')"><span class="tag">Private Yacht</span></div>
+      <div class="cardbody"><div class="cardtop"><h3>Azimut 55</h3><span class="price">$2,900 / day</span></div><div class="meta"><span>55 FT</span><span>12 Guests</span><span>Captain</span></div><a class="btn gold" href="https://wa.me/971500000000?text=Hi%20NOIR%C3%89%2C%20I%27d%20like%20to%20book%20the%20Azimut%2055." target="_blank">BOOK THIS YACHT ↗</a></div>
+    </article>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="trustgrid">
+    <div class="trustitem"><div class="num">01</div><b>24/7 VIP Delivery</b><p>Hotel, residence or airport. Delivered where and when you need it.</p></div>
+    <div class="trustitem"><div class="num">02</div><b>Fully Insured</b><p>Premium coverage and transparent terms for complete peace of mind.</p></div>
+    <div class="trustitem"><div class="num">03</div><b>Private Concierge</b><p>One dedicated contact from enquiry through handover and return.</p></div>
+    <div class="trustitem"><div class="num">04</div><b>Flexible Payments</b><p>Card and approved digital payment options available on request.</p></div>
+  </div>
+</section>
+
+<section class="section" id="concierge">
+  <div class="split">
+    <div class="imagePanel"></div>
+    <div class="copy">
+      <div class="kicker">Beyond Rental</div><h2>Your time is the luxury.</h2>
+      <p>NOIRÉ is built around effortless access. Whether you're arriving for a weekend, hosting a private event, or simply want the right car waiting outside your hotel, our concierge team takes care of the details.</p>
+      <div class="list">
+        <div><span class="check">✦</span><div><b>Hotel & Airport Handover</b><span>Seamless delivery across Dubai.</span></div></div>
+        <div><span class="check">✦</span><div><b>Last-Minute Requests</b><span>Priority sourcing from our private network.</span></div></div>
+        <div><span class="check">✦</span><div><b>Custom Experiences</b><span>Yacht days, desert drives and private occasions.</span></div></div>
+      </div>
+      <a class="btn gold" href="https://wa.me/971500000000?text=Hi%20NOIR%C3%89%2C%20I%27d%20like%20a%20private%20concierge%20consultation." target="_blank">SPEAK TO CONCIERGE ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="experience">
+  <small>The NOIRÉ Standard</small>
+  <blockquote>“Luxury isn't what you own. It's how effortlessly everything comes together.”</blockquote>
+  <small>Private mobility · Dubai</small>
+</section>
+
+<footer id="contact">
+  <div class="footerlogo">NOIRÉ</div>
+  <div>Dubai, United Arab Emirates · Private bookings only</div>
+  <div>© 2026 NOIRÉ</div>
+</footer>
+</body>
+</html>
